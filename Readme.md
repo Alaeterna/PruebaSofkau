@@ -61,6 +61,9 @@ public static void main(String args[]) throws InterruptedException {
             }
         });
     }
+}
+
+
 Nos encontramos ahora con la interfaz del juego donde primero tenemos un Splash que hace una prueba a la conexion con mysql para luego mandarnos a una pestaña de creacion de usuario.Puedes ver ejemplos del juego en el siguiente video: 
 
 
