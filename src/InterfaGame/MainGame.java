@@ -40,6 +40,7 @@ public class MainGame extends javax.swing.JFrame {
     private Niveles level = new Niveles();                                // Creando Objeto Niveles para seleccionar nivel
     private int cont, cont2;
     private String SelectLevel, Boton;
+    private HiloAni2 h2 = new HiloAni2();
 
     public MainGame() {
         Default();
@@ -337,7 +338,7 @@ public class MainGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
-  
+
     }//GEN-LAST:event_formMouseEntered
 
     /**
@@ -373,7 +374,7 @@ public class MainGame extends javax.swing.JFrame {
                 new MainGame().setVisible(true);
             }
         });
-        
+
     }
 
     //Se inician los valores por defecto del JFRAME
@@ -399,7 +400,6 @@ public class MainGame extends javax.swing.JFrame {
         Level(0);
         cont = 0;
         runhilo();
-        HiloAni2 h2 = new HiloAni2();
         h2.start();
         jProgressBar1.setUI(new BasicProgressBarUI() {
             @Override
@@ -576,6 +576,7 @@ public class MainGame extends javax.swing.JFrame {
                 jLabel9.setIcon(new ImageIcon(getClass().getResource("/InterfaGame/CateTV.png")));
                 jLabel11.setText("ACUMULADO=2000");
                 runhilo();
+                h2.time =0;
                 break;
             case 2:
                 Level(2);
@@ -586,6 +587,7 @@ public class MainGame extends javax.swing.JFrame {
                 jLabel9.setIcon(new ImageIcon(getClass().getResource("/InterfaGame/CateColombia.png")));
                 jLabel11.setText("ACUMULADO=3000");
                 runhilo();
+                h2.time =0;
                 break;
             case 3:
                 Level(3);
@@ -595,6 +597,7 @@ public class MainGame extends javax.swing.JFrame {
                 jLabel9.setIcon(new ImageIcon(getClass().getResource("/InterfaGame/CateCiencia.png")));
                 jLabel11.setText("ACUMULADO=4000");
                 runhilo();
+                h2.time =0;
                 break;
             case 4:
                 Level(4);
@@ -604,6 +607,7 @@ public class MainGame extends javax.swing.JFrame {
                 jLabel9.setIcon(new ImageIcon(getClass().getResource("/InterfaGame/CateLibros.png")));
                 jLabel11.setText("ACUMULADO=5000");
                 runhilo();
+                h2.time =0;
                 break;
             case 5:
                 jProgressBar1.setValue(10);
@@ -626,7 +630,6 @@ public class MainGame extends javax.swing.JFrame {
             jLabel11.setVisible(true);
         }
     }
-
 
     //Identifica si la respuesta seleccionada es la respuesta correcta
     public void Respuestacorrecta(Niveles levelRC, int contRC, RandomPregunta preRC, String BotonPress) {
@@ -716,9 +719,9 @@ public class MainGame extends javax.swing.JFrame {
         }
 
     }
-    
-    private class HiloAni2 extends Thread{
-        
+
+    private class HiloAni2 extends Thread {
+
         private int time = 0;
 
         // Metodo run de nuestro hilo @Override fuerza al compilador a comprobar en tiempo de compilacion la sobrecarga del metodo
@@ -728,7 +731,7 @@ public class MainGame extends javax.swing.JFrame {
             while (time <= 60) {
                 try {
                     Thread.sleep(1000);
-                    cont2=time;
+                    cont2 = time;
                     time++;
                     System.out.println(time);
                 } catch (InterruptedException ex) {
@@ -736,7 +739,8 @@ public class MainGame extends javax.swing.JFrame {
                 }
             }
             System.exit(0);
-            
+            time = 0;
+
         }
 
     }
