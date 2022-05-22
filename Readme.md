@@ -53,9 +53,7 @@ aunque puedes usar el que a ti te guste. Listo vamos a realizar la ejecucion del
 
 Para esto vamos a apache NetBeans IDE 13 en el package MainLogin abrimos la clase Splash.java y ejecutamos el siguiente metodo main
 
-
 public static void main(String args[]) throws InterruptedException {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Splash().setVisible(true);
