@@ -55,7 +55,6 @@ Para esto vamos a apache NetBeans IDE 13 en el package MainLogin abrimos la clas
 
 
 public static void main(String args[]) throws InterruptedException {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Splash().setVisible(true);
