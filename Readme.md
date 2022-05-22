@@ -55,13 +55,13 @@ Para esto vamos a apache NetBeans IDE 13 en el package MainLogin abrimos la clas
 
 
 public static void main(String args[]) throws InterruptedException {
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Splash().setVisible(true);
             }
         });
     }
-
 
 Nos encontramos ahora con la interfaz del juego donde primero tenemos un Splash que hace una prueba a la conexion con mysql para luego mandarnos a una pestaña de creacion de usuario.Puedes ver ejemplos del juego en el siguiente video: 
 
