@@ -547,6 +547,9 @@ public class MainGame extends javax.swing.JFrame {
 
     //Funcion para modificar JFRAME dependiendo el Nivel
     private void Modifi_Ventana(int constante) {
+        HiloAni timeout = new HiloAni();
+        timeout.start();
+        
         switch (constante) {
             case 1:
                 Level(1);
