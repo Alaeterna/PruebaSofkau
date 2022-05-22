@@ -17,17 +17,17 @@ import java.util.ArrayList;
  */
 public class Niveles {
 
-    ConSQL cx;                              // Objeto conexion SQL
-    PreparedStatement ps = null;           // Creando comando sql
-    ResultSet rs = null;                  // Resultado del comando sql 
-    Preguntas pr1;                       // Objeto Preguntas 
-    String query = "";                  // Sentencia ejecutada en MYSQL
+    private ConSQL cx;                              // Objeto conexion SQL
+    private PreparedStatement ps = null;           // Creando comando sql
+    private ResultSet rs = null;                  // Resultado del comando sql 
+    private Preguntas pr1;                       // Objeto Preguntas 
+    private String query = "";                  // Sentencia ejecutada en MYSQL
 
-    private final List<Preguntas> pre1 = new ArrayList<>();                   // Se crea una lista para la insercion las preguntas
-    private final List<Preguntas> pre2 = new ArrayList<>();                  // Se crea una lista para la insercion las preguntas
-    private final List<Preguntas> pre3 = new ArrayList<>();                 // Se crea una lista para la insercion las preguntas
-    private final List<Preguntas> pre4 = new ArrayList<>();                // Se crea una lista para la insercion las preguntas
-    private final List<Preguntas> pre5 = new ArrayList<>();               // Se crea una lista para la insercion las preguntas
+    private List<Preguntas> pre1 = new ArrayList<>();                   // Preguntas nivel1
+    private List<Preguntas> pre2 = new ArrayList<>();                  // Preguntas nivel2
+    private List<Preguntas> pre3 = new ArrayList<>();                 // Preguntas nivel3
+    private List<Preguntas> pre4 = new ArrayList<>();                // Preguntas nivel4
+    private List<Preguntas> pre5 = new ArrayList<>();               // Preguntas nivel5
     
 
     //Constructor Niveles Inicia las variables

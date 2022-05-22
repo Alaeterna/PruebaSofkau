@@ -44,6 +44,9 @@ public class Instrucciones extends javax.swing.JDialog {
                 + "3. Llega al final para llevarte tu premio"
                 + "\n"
                 + "\n"
+                + "4. Si el juego detecta inactividad por un minuto se \n cerrara automaticamente"
+                + "\n"
+                + "\n"
                 + "Buena suerte DINOJUGADOR");
 
     }
