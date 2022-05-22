@@ -8,11 +8,14 @@ package InterfaGame;
  *
  * @author ASUS
  */
+
+//Selecion Aleatoria de la pregunta
 public class RandomPregunta {
 
     private int RandomNum, a, b, c, d, aux;
     private int NumeAle[] = new int[4];
-
+    
+    //Iniciando los valores 
     public RandomPregunta() {
         RandomNum = 0;
     }

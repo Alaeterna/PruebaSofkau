@@ -9,6 +9,8 @@ package InterfaGame;
  *
  * @author ASUS
  */
+
+//Clase creada para cargar las preguntas de mysql 
 public class Preguntas {
     
     int num;
@@ -17,7 +19,8 @@ public class Preguntas {
     private String opt2;
     private String opt3;
     private String res;
-
+    
+    //Contructor que inicializa las variables
     public Preguntas() {
         
         num = 0;
@@ -28,7 +31,9 @@ public class Preguntas {
         res = "";
         
     }
-
+    
+    
+    //SETTER AND GETTER
     public int getNum() {
         return num;
     }

@@ -16,21 +16,24 @@ import java.sql.SQLException;
  */
 public class ConSQL {
 
-    String bd = "";
-    String url = "jdbc:mysql://localhost:3306/";
-    String user = "root";
-    String password = "mysql";
-    String driver = "com.mysql.cj.jdbc.Driver";
+    String bd = "";                                         //Base de datos a utilziar
+    String url = "jdbc:mysql://localhost:3306/";           //dirrecion local de MYSQL
+    String user = "root";                                 //Usuario con el que mme conecto a mysql
+    String password = "mysql";                           // Contraseña del usuario 
+    String driver = "com.mysql.cj.jdbc.Driver";         // Driver para conectar java con MYSQL 
     Connection cx;
     
+    //Constructor que inicia bd sin datos
     public ConSQL() {
         this.bd = bd;
     }
     
+    //Constructor que conecta MYSQL con la base de datos selecionada String bd
     public ConSQL(String bd) {
         this.bd = bd;
     }
-
+    
+    //Establece la conexion con MYSQL
     public Connection Conectar() {
         try {
             Class.forName(driver);
@@ -42,7 +45,8 @@ public class ConSQL {
         }
         return cx;
     }
-
+    
+    //Desconectar con MYSQL
     public void Desconectar() {
         try {
             cx.close();

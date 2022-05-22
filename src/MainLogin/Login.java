@@ -266,7 +266,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-
+    
+    //Iniciando valeros por defecto al iniciar
     private void Default() {
         setSize(452, 250);
         setLocationRelativeTo(null);
@@ -276,7 +277,8 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(Color.black);
         jButton1.setEnabled(false);
     }
-
+    
+    //Escala la imagen selecionada al JLabel
     private void SetImageLabel(JLabel labelName, String root) {
         ImageIcon image = new ImageIcon(root);
         Icon icon = new ImageIcon(
